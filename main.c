@@ -93,7 +93,7 @@ int main()
     if (Market->size > 0)
         choose_to_insert(Market, &brands);
 
-    printf("size: %i", Market->size);
+    printf("size: %i\n", Market->size);
 
     delete_brands(brands);
 
@@ -321,12 +321,12 @@ void delete_storage(Storage *storage)
 {
     Smartphone *cur, *next;
     cur = storage->first_pos;
-    while (cur != storage->last_pos)
+    do
     {
         next = cur->next;
         delete_position(cur);
         cur = next;
     }
-    delete_position(cur);
+    while (cur != storage->first_pos);
     free(storage);
 }
