@@ -237,7 +237,6 @@ void choose_to_insert(Storage *storage, Brands **brands)
             fgets(string, MAX_STR_IN_FILE_LEN, stdin);
             insert_selected(storage, string, val, brands);
         }
-
     } while (val != 0);
 }
 
